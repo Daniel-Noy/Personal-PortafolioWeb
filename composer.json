@@ -1,0 +1,23 @@
+{
+    "name": "danielnoyola/portfolio",
+    "description": "Portafolio web",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controllers\\" : "./controllers",
+            "Models\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel Noyola",
+            "email": "pepenoyola13@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

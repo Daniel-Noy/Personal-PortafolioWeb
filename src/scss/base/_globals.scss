@@ -1,0 +1,47 @@
+@use 'variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap');
+
+html {
+    min-height: 100vh;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$main-font;
+    font-size: 1.6rem;
+    color: v.$clr-texts;
+    background-color: v.$clr-primary-500;
+}
+a {
+    color: v.$clr-links;
+    text-decoration: none;
+    font-size: v.$fs-links;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+//? ---- Tipography ----
+h1 {
+    font-size: v.$fs-headings;
+}
+h2 {
+    font-size: v.$fs-titles;
+}
+h3 {
+    font-size: 3rem;
+}
+p {
+    font-size: v.$fs-texts;
+}

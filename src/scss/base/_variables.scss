@@ -1,0 +1,50 @@
+//? ---- Font ----
+//* Family
+$main-font: 'Outfit', sans-serif;
+
+//* Weight
+$fw-light: 200;
+$fw-regular: 400;
+$fw-bold: 700;
+
+//* Size
+$fs-400: 1.4rem;
+$fs-450: 1.6rem;
+$fs-500: 1.8rem;
+$fs-600: 2.1rem;
+$fs-700: 3rem;
+$fs-800: 3.6rem;
+$fs-900: 4rem;
+
+$fs-headings: $fs-900;
+$fs-titles: $fs-800;
+$fs-texts: $fs-500;
+$fs-links: $fs-450;
+
+//? ---- Colors ----
+$clr-primary-500: #23263a;
+$clr-primary-600: #201E33;
+$clr-primary-700: #1F1A2C;
+$clr-primary-800: #1D1525;
+$clr-primary-900: #1A111E;
+
+$clr-secondary-500: #1884dd;
+$clr-secondary-600: #1350CA;
+$clr-secondary-700: #0E23B6;
+$clr-secondary-800: #170AA2;
+
+$clr-gray-500: #464D5A; 
+$clr-gray-400: #69737A; 
+$clr-gray-300: #8C9799; 
+$clr-gray-200: #AFB9B9; 
+$clr-gray-100: #D3D8D7;
+$clr-white: #fff;
+
+$clr-texts: $clr-white;
+$clr-links: $clr-gray-100;
+
+//? ---- Media Queries ----
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$xl_desktop: 1200px;

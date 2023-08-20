@@ -1,0 +1,95 @@
+@use 'variables' as v;
+
+//? ---- Media Queries ----
+@mixin phone {
+    @media (min-width: v.$phone) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin xl_desktop {
+    @media (min-width: v.$xl_desktop) {
+        @content;
+    }
+}
+
+//? ---- Layout ----
+@mixin grid($columns, $spacing) {
+    display: grid;
+    gap: $spacing;
+    grid-template-columns: repeat($columns, 1fr);
+}
+@mixin fluidGrid($minWidth, $gap: 2rem, $maxWidth: 1fr) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($minWidth, $maxWidth));
+    gap: $gap;
+}
+
+@mixin flex($direction: row, $gap: 2rem, $centered: true) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+
+    @if $centered {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@mixin container {
+    width: min(95%, 140rem);
+    margin: 0 auto;
+}
+
+@mixin container-md {
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+@mixin container-sm {
+    width: min(95%, 60rem);
+    margin: 0 auto;
+}
+
+//? ---- Botons ----
+@mixin boton($bgColor, $textColor) {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: $colorTexto;
+    background-color: $bgColor;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .300ms;
+
+    &:hover {
+        background-color: darken( $bgColor, 10% );
+        cursor: pointer;
+    }
+    &:active {
+        background-color: darken( $bgColor, 20% );
+    }
+}
+
+//? ---- Typography ----
+@mixin text-flow($min, $max) {
+    font-size: clamp($min, -0.8rem + 10vw, $max);
+}
+@mixin text-clamp($lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

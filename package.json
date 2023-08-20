@@ -1,0 +1,28 @@
+{
+  "name": "portafolio-devweb",
+  "version": "1.0.0",
+  "description": "Mi Portafolio",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp dev",
+    "server": "cd public && php -S localhost:3000",
+    "css-watch": "sass -w -s compressed src/scss/app.scss public/build/css/app.css",
+    "css": "sass -s compressed src/scss/app.scss public/build/css/app.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cache": "^1.1.3",
+    "gulp-clean": "^0.4.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.41.1",
+    "terser": "^5.14.2"
+  }
+}
