@@ -17,7 +17,8 @@ $fs-800: 3.6rem;
 $fs-900: 4rem;
 
 $fs-headings: $fs-900;
-$fs-titles: $fs-800;
+$fs-titles: $fs-700;
+$fs-seccion-heading: $fs-600;
 $fs-texts: $fs-500;
 $fs-links: $fs-450;
 
@@ -40,8 +41,18 @@ $clr-gray-200: #AFB9B9;
 $clr-gray-100: #D3D8D7;
 $clr-white: #fff;
 
-$clr-texts: $clr-white;
+$clr-texts: $clr-gray-100;
 $clr-links: $clr-gray-100;
+
+$clr-shadow-100: 0px 5px 7px 1px #1f1a2c;
+$clr-shadow-200: 0px 5px 12px 1px #1f1a2c;
+
+//? ---- Spacing ----
+$spacing-50: 2rem;
+$spacing-100: 4rem;
+$spacing-200: 8rem;
+$spacing-300: 12rem;
+$spacing-400: 16rem;
 
 //? ---- Media Queries ----
 $phone: 480px;

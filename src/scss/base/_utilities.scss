@@ -1,0 +1,13 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+//? Layout
+.container {
+    @include m.container;
+}
+.container-md {
+    @include m.container-md;
+}
+.container-sm {
+    @include m.container-sm;
+}
