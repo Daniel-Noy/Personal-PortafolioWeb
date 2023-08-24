@@ -1,0 +1,29 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.skills {
+
+    &__categories {
+        @include m.grid(1, v.$spacing-100);
+        @include m.tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__category {
+        padding: v.$spacing-50;
+        text-align: center;
+    }
+
+    &__title {
+        margin-top: 0
+    }
+
+    &__container {
+        @include m.flex;
+
+        i {
+            font-size: 7rem;
+        }
+    }
+}

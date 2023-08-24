@@ -1,0 +1,45 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: v.$spacing-100;
+    border-radius: 1rem;
+    background-color: v.$clr-primary-700;
+    box-shadow: v.$clr-shadow-100;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        display: inline-block;
+        font-size: v.$fs-labels;
+        color: v.$clr-texts;
+    }
+
+    &__input,
+    &__textarea {
+        padding: 1rem;
+        color: v.$clr-gray-100;
+        border: 1px solid v.$clr-primary-600;
+        border-radius: .5rem;
+        background-color: v.$clr-primary-500;
+    }
+
+    &__textarea {
+        resize: vertical;
+    }
+
+    &__submit {
+        @include m.tablet {
+            max-width: 18rem;
+            padding-block: 1.5rem;
+        }
+    }
+}

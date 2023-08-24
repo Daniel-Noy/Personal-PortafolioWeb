@@ -34,14 +34,18 @@
     gap: $gap;
 }
 
-@mixin flex($direction: row, $gap: 2rem, $centered: true) {
+@mixin flex($direction: row, $gap: 2rem, $centered: true, $jc: space-between, $ai: center) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: $direction;
     gap: $gap;
 
     @if $centered {
         align-items: center;
         justify-content: center;
+    } @else {
+        align-items: $ai;
+        justify-content: $jc;
     }
 }
 
@@ -61,25 +65,14 @@
 }
 
 //? ---- Botons ----
-@mixin boton($bgColor, $textColor) {
-    display: inline-block;
-    width: 100%;
-    padding: 1.5rem 4rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    color: $colorTexto;
+@mixin button($bgColor, $textColor) {
+    color: $textColor;
     background-color: $bgColor;
-    border: none;
-    transition-property: background-color;
-    transition-duration: .300ms;
-
     &:hover {
-        background-color: darken( $bgColor, 10% );
-        cursor: pointer;
+        background-color: darken( $bgColor, 8% );
     }
     &:active {
-        background-color: darken( $bgColor, 20% );
+        background-color: darken( $bgColor, 16% );
     }
 }
 

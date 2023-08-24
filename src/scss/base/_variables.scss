@@ -20,7 +20,8 @@ $fs-headings: $fs-900;
 $fs-titles: $fs-700;
 $fs-seccion-heading: $fs-600;
 $fs-texts: $fs-500;
-$fs-links: $fs-450;
+$fs-links: $fs-500;
+$fs-labels: $fs-500;
 
 //? ---- Colors ----
 $clr-primary-500: #23263a;
@@ -44,15 +45,24 @@ $clr-white: #fff;
 $clr-texts: $clr-gray-100;
 $clr-links: $clr-gray-100;
 
-$clr-shadow-100: 0px 5px 7px 1px #1f1a2c;
-$clr-shadow-200: 0px 5px 12px 1px #1f1a2c;
+$clr-shadow-100: 5px 5px 7px 1px #464d5a2f;
+$clr-shadow-200: 5px 5px 7px 1px #1f1a2cdc;
+$clr-shadow-250: 5px 5px 12px 1px #1f1a2c;
 
 //? ---- Spacing ----
-$spacing-50: 2rem;
-$spacing-100: 4rem;
-$spacing-200: 8rem;
-$spacing-300: 12rem;
-$spacing-400: 16rem;
+$spacing: (
+50: 2rem,
+100: 4rem,
+200: 8rem,
+300: 12rem,
+400: 16rem
+);
+$spacing-50: map-get($map: $spacing, $key: 50);
+$spacing-100: map-get($map: $spacing, $key: 100);
+$spacing-200: map-get($map: $spacing, $key: 200);
+$spacing-300: map-get($map: $spacing, $key: 300);
+$spacing-400: map-get($map: $spacing, $key: 400);
+
 
 //? ---- Media Queries ----
 $phone: 480px;

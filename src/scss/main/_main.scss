@@ -1,0 +1,59 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.main {
+    &__section {
+        position: relative;
+        padding-block: v.$spacing-100;
+        @include m.tablet {
+            padding: v.$spacing-100;
+            padding-block: v.$spacing-200;
+        }
+        
+        &:nth-child(even) {
+            background-color: v.$clr-primary-600;
+        }
+    }
+    &__container {
+        @include m.container;
+    }
+
+    &__title {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        text-align: center;
+        @include m.text-flow(1rem, v.$fs-titles);
+
+        &::before,
+        &::after {
+            content: "";
+
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            @include m.phone {
+                width: 100px;
+            }
+        }
+
+        &::before {
+            left: -60px;
+            @include m.phone {
+                left: -110px;
+            }
+            background: linear-gradient(90deg, rgba(24,132,221,0) 0%, rgba(24,132,221,0.37) 25.93%, #1884dd 100%);
+        }
+        &::after {
+            right: -60px;
+            @include m.phone {
+                right: -110px;
+            }
+            background: linear-gradient(90deg, #1884dd 0%, rgba(24,132,221,0.37) 74.07%, rgba(24,132,221,0) 100%);
+        }
+    }
+}

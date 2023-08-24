@@ -1,0 +1,14 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.presentation {
+    background-color: v.$clr-primary-600;
+    &__grid {
+        @include m.grid(1, v.$spacing-50);
+        place-items: center;
+        
+        @include m.tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

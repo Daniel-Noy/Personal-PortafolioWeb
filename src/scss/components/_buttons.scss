@@ -1,0 +1,27 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    font-size: v.$fs-links;
+    font-weight: v.$fw-light;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &__primary {
+        @include m.button(v.$clr-primary-600, v.$clr-links)
+    }
+    &__secondary {
+        @include m.button(v.$clr-secondary-500, v.$clr-white)
+    }
+
+    &--full {
+        width: 100%;
+    }
+}

@@ -7,6 +7,8 @@ use MVC\Router;
 class MainController {
     public static function index(Router $router)
     {
-        $router->render('main/index');
+        $router->render('main/index', [
+            'title' => 'Inicio'
+        ]);
     }
 }

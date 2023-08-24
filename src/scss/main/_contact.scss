@@ -1,0 +1,19 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contact {
+    &__grid {
+        display: grid;
+        gap: v.$spacing-200;
+        @include m.desktop {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+    &__cards {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: v.$spacing-100;
+    }
+}
