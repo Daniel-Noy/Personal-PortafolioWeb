@@ -3,7 +3,7 @@
         <h2 class="main__title">Mis proyectos</h2>
 
         <div class="projects__grid">
-            <?php for($i; $i < 8; $i++) { ?>
+            <?php for($i = 0; $i < 8; $i++) { ?>
                 <div class="card">
                     <picture>
                         <img class="card__image" src="https://picsum.photos/id/1/500/350" alt="Imagen Proyecto">

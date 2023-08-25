@@ -11,4 +11,9 @@ class MainController {
             'title' => 'Inicio'
         ]);
     }
+
+    public static function nopage()
+    {
+        debugguing('Not page');
+    }
 }

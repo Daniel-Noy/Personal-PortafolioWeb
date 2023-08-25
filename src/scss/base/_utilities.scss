@@ -22,6 +22,12 @@
     .mg-#{$name}-tp {
         margin-top: $size;
     }
+    .mg-#{$name}-inline {
+        margin-inline: $size;
+    }
+    .mg-#{$name}-block {
+        margin-block: $size;
+    }
     
     .pd-#{$name} {
         padding: $size;
@@ -38,4 +44,15 @@
     .pd-#{$name}-block {
         padding-block: $size;
     }
+}
+
+//? ---- Text ----
+.accent-text {
+    background-color: v.$clr-secondary-500;
+}
+.text__gradient {
+    background: linear-gradient(to right, v.$clr-secondary-500 0%, lighten(v.$clr-secondary-500, 20%) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
