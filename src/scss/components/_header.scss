@@ -16,4 +16,10 @@
     &__links {
         @include m.flex();
     }
+
+    &__link {
+        &:hover {
+            color: v.$clr-white;
+        }
+    }
 }
