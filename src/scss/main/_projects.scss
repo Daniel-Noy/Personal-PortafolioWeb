@@ -3,6 +3,6 @@
 
 .projects {
     &__grid {
-        @include m.fluidGrid(34rem);
+        @include m.fluidGrid(34rem, v.$spacing-100);
     }
 }

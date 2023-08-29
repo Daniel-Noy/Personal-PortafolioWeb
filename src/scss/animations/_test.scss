@@ -1,0 +1,32 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.floating {
+    transition: all 600ms;
+    &:hover {
+        transition: all 350ms;
+        transform: translateY(-10px);
+        box-shadow: v.$clr-shadow-250;
+
+        // animation-name: floating;
+        // animation-duration: 1s;
+        // animation-iteration-count: infinite;
+        // animation-timing-function: ease-in;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(-10px);
+        box-shadow: v.$clr-shadow-250;
+    }
+    
+    // 100% {
+    //     transform: translateY(0);
+    // }
+
+}
