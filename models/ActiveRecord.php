@@ -8,8 +8,8 @@ class ActiveRecord {
     protected static $table = '';
     protected static $dbCol = [];
 
-    // Alertas y Mensajes
-    protected static $alertas = [];
+    // alerts y Mensajes
+    protected static $alerts = [];
     
     // Definir la conexión a la BD - includes/database.php
     public static function setDB($database) {
@@ -18,18 +18,18 @@ class ActiveRecord {
 
     // Setear un tipo de Alerta
     public static function setAlert($tipo, $mensaje) {
-        static::$alertas[$tipo][] = $mensaje;
+        static::$alerts[$tipo][] = $mensaje;
     }
 
-    // Obtener las alertas
+    // Obtener las alerts
     public static function getAlerts() {
-        return static::$alertas;
+        return static::$alerts;
     }
 
     // Validación que se hereda en modelos
     public function validate() {
-        static::$alertas = [];
-        return static::$alertas;
+        static::$alerts = [];
+        return static::$alerts;
     }
 
     // Consulta SQL para crear un objeto en Memoria (Active Record)

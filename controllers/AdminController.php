@@ -24,7 +24,8 @@ class AdminController {
                     $_SESSION['email'] = $user->email;
                     $_SESSION['isAdmin'] = $user->admin;
 
-                    header('Location: /admin/dashboard');
+                    // header('Location: /admin/dashboard');
+                    header('Location: /admin/projects/add');
                     return;
                 } else {
                     User::setAlert('error', 'Contraseña incorrecta');
@@ -38,11 +39,11 @@ class AdminController {
         ]);
     }
 
-    public static function dashboard(Router $router) {
+    public static function dashboard(Router $router)
+    {
         startSession();
         debugguing($_SESSION);
     }
-
 
     public static function createPass()
     {

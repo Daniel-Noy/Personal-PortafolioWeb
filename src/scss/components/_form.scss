@@ -11,6 +11,7 @@
     box-shadow: v.$clr-shadow-100;
 
     &__field {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -22,6 +23,23 @@
         font-size: v.$fs-labels;
         color: v.$clr-texts;
     }
+    &__file {
+        position: absolute;
+        bottom: 0;
+        margin: 1rem;
+        padding: .5rem 2rem;
+        width: 90px;
+
+        text-align: center;
+        border-radius: .5rem;
+        background-color: v.$clr-secondary-500;
+        transition: background-color 200ms ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: v.$clr-secondary-600;
+        }
+    }
 
     &__input,
     &__textarea {
@@ -30,6 +48,11 @@
         border: 1px solid v.$clr-primary-600;
         border-radius: .5rem;
         background-color: v.$clr-primary-500;
+
+        &--file {
+            background-color: transparent;
+            border: none;
+        }
     }
 
     &__textarea {
@@ -38,7 +61,7 @@
 
     &__submit {
         @include m.tablet {
-            max-width: 18rem;
+            width: max-content;
             padding-block: 1.5rem;
         }
     }
