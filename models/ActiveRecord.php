@@ -200,7 +200,7 @@ class ActiveRecord {
     // Busqueda Where con Columna 
     public static function where($columna, $valor) {
         $query = "SELECT * FROM " . static::$table . " WHERE {$columna} = '{$valor}'";
-        // debuguear($query);
+        // debugguing($query);
         $res = self::querySQL($query);
         return array_shift( $res ) ;
     }

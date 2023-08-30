@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap');
 
 html {
-    min-height: 100vh;
     font-size: 62.5%;
     box-sizing: border-box;
 }
@@ -10,6 +9,7 @@ html {
     box-sizing: inherit;
 }
 body {
+    min-height: 100vh;
     font-family: v.$main-font;
     font-size: 1.6rem;
     color: v.$clr-texts;

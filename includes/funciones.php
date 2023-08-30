@@ -43,6 +43,13 @@ function isAdmin() : bool {
         session_start();
     }
 
-    return boolval($_SESSION['isAdmin']);
+    return isset($_SESSION['isAdmin']) && boolval($_SESSION['isAdmin']);
+}
+
+function startSession() : void
+{
+    if (!isset($_SESSION)) {
+        session_start();
+    }
 }
 

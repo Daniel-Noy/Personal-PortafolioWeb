@@ -1,0 +1,7 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.login {
+    padding-top: v.$spacing-300;
+    width: 50vh;
+    // @include m.flex();
+}
