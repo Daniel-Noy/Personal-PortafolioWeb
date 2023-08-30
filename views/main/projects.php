@@ -4,7 +4,7 @@
 
         <div class="projects__grid">
             <?php for($i = 0; $i < 8; $i++) { ?>
-                <div class="card">
+                <div class="card || floating">
                     <picture>
                         <img class="card__image" src="https://picsum.photos/id/1/500/350" alt="Imagen Proyecto">
                     </picture>
