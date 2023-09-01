@@ -2,5 +2,6 @@ vendor/
 node_modules/
 **/*.map
 **/*.css
+**/*.sql
 
 public/img/

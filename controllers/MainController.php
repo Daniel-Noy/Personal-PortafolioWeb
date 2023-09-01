@@ -2,13 +2,18 @@
 
 namespace Controllers;
 
+use Models\Project;
 use MVC\Router;
 
 class MainController {
     public static function index(Router $router)
     {
+
+        $projects = Project::all();
+        
         $router->render('main/index', [
-            'title' => 'Inicio'
+            'title' => 'Inicio',
+            'projects' => $projects
         ]);
     }
 
