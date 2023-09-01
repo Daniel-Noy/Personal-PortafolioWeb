@@ -19,7 +19,7 @@ class ProjectController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (!empty($_FILES['image']['tmp_name'])) {
-                $imagesDir = '../public/img/speakers';
+                $imagesDir = '../public/img/';
 
                 if(!is_dir($imagesDir)) mkdir($imagesDir, 0777, true);
 
