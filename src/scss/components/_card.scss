@@ -23,8 +23,7 @@
     }
 
     &__description {
-        @include m.flex($gap: 1rem);
-        justify-content: flex-start;
+        @include m.flex($gap: 1rem, $jc: flex-start, $centered: false);
 
         i {
             font-size: 4rem;
@@ -47,13 +46,40 @@
         font-size: 2.5rem;
     }
 
-    $parent: &;
+    $this: &;
     &--contact {
         background-color: v.$clr-primary-700;
         box-shadow: v.$clr-shadow-100;
-        #{parent}__title {
+        #{this}__title {
             margin: 0;
         }
     }
 
+    transition: all 600ms;
+    &:not(.card--contact):hover {
+        transition: all 350ms;
+        transform: translateY(-10px);
+        box-shadow: v.$clr-shadow-250;
+    }
+
+    &__modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+        background-color: #00000083;
+        transition: background-color 300ms;
+
+        #{$this} {
+            width: min(600px, 90%);
+            
+            &__image {
+                height: 260px;
+            }
+            
+        }
+    }
 }
