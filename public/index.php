@@ -25,4 +25,9 @@ $router->get('/admin/projects', [ProjectController::class, 'index']);
 $router->get('/admin/projects/add', [ProjectController::class, 'addProject']);
 $router->post('/admin/projects/add', [ProjectController::class, 'addProject']);
 
+$router->get('/admin/projects/edit', [ProjectController::class, 'editProject']);
+$router->post('/admin/projects/edit', [ProjectController::class, 'editProject']);
+
+$router->get('/admin/projects/delete', [ProjectController::class, 'deleteProject']);
+
 $router->checkRoutes();

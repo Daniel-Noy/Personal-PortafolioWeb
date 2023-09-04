@@ -42,7 +42,10 @@ class AdminController {
     public static function dashboard(Router $router)
     {
         startSession();
-        debugguing($_SESSION);
+        // debugguing($_SESSION);
+        $router->render('/admin/dashboard', [
+            'title' => 'Dashboard'
+        ]);
     }
 
     public static function createPass()

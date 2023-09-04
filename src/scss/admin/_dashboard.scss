@@ -1,0 +1,46 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &__title {
+        text-align: center;
+    }
+
+    //? ----- Sidebar -----
+    &__sidebar {
+        position: absolute;
+        left: -50%;
+        width: 12rem;
+        height: 100%;
+        background-color: v.$clr-primary-600;
+        transition: left 200ms ease;
+        @include m.tablet {
+            position: initial;
+        }
+
+        &--show {
+            left: 0;
+        }
+    }
+
+    //? ----
+    &__content {
+        width: 100%;
+        
+        padding: 1rem 1rem 3rem 1rem;
+        overflow-y: auto;
+        @include m.tablet {
+            padding: 1rem 5rem 3rem 5rem;
+        }
+    }
+    &__grid {
+        position: relative;
+        display: flex;
+        flex: 1;
+        overflow-y: auto;
+    }
+}

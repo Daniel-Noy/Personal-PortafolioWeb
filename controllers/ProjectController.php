@@ -47,4 +47,8 @@ class ProjectController {
             'project' => $project
         ]);
     }
+
+    public static function editProject(Router $router) {
+
+    }
 }
