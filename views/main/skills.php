@@ -1,6 +1,6 @@
 <section class="main__section">
     <div class="main__container skills">
-        <h2 class="main__title">Mis habilidades</h2>
+        <h2 class="main__title">Habilidades</h2>
         <div class="skills__categories">
             <div class="skills__category">
                 <h3 class="skills__title">Categoria 1</h3>

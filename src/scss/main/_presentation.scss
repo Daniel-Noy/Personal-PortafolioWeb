@@ -2,10 +2,19 @@
 @use '../base/mixins' as m;
 
 .presentation {
+    padding: v.$spacing-50;
+    @include m.tablet {
+        padding-inline: v.$spacing-200;
+    }
     background-color: v.$clr-primary-600;
     &__grid {
         @include m.grid(1, v.$spacing-50);
+        @include m.container;
         place-items: center;
+        padding: v.$spacing-50;
+        @include m.tablet {
+            padding: v.$spacing-100;
+        }
         
         @include m.tablet {
             grid-template-columns: repeat(2, 1fr);

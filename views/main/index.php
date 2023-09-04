@@ -1,5 +1,5 @@
-<section class="presentation || pd-100-block">
-    <div class="presentation__grid || container pd-100">
+<section class="presentation">
+    <div class="presentation__grid">
         <div class="presentation__content">
             <h1 class="presentation__title">
                 Hola, soy <span class="text__gradient">Daniel</span> y soy <span class="text__gradient">Desarrollador Web</span>

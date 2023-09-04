@@ -5,10 +5,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: v.$spacing-100;
+    padding: v.$spacing-50;
     border-radius: 1rem;
     background-color: v.$clr-primary-700;
     box-shadow: v.$clr-shadow-100;
+    @include m.phone {
+        padding: v.$spacing-100;
+    }
 
     &__field {
         position: relative;

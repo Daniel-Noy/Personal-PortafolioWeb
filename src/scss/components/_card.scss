@@ -6,6 +6,13 @@
     background-color: v.$clr-primary-600;
     overflow: hidden;
     box-shadow: v.$clr-shadow-200;
+    &:not(.card--contact) {
+        cursor: pointer;
+    }
+
+    @media (max-width: 350px) {
+        max-width: 300px;
+    }
 
     &__image {
         width: 100%;
@@ -24,6 +31,7 @@
 
     &__description {
         @include m.flex($gap: 1rem, $jc: flex-start, $centered: false);
+        @include m.text-clamp(2);
 
         i {
             font-size: 4rem;
@@ -33,6 +41,7 @@
     &__links {
         @include m.flex($centered:false);
         row-gap: 1rem;
+        display: none;
     }
 
     &__link {
@@ -52,6 +61,9 @@
         box-shadow: v.$clr-shadow-100;
         #{this}__title {
             margin: 0;
+        }
+        #{$this}__description {
+            display: flex;
         }
     }
 
@@ -77,7 +89,15 @@
             width: min(600px, 90%);
             
             &__image {
-                height: 260px;
+                @include m.tablet {
+                    height: 260px;
+                }
+            }
+            &__description {
+                -webkit-line-clamp: 10;
+            }
+            &__links {
+                display: flex;
             }
             
         }
