@@ -15,32 +15,38 @@ class Pager {
         $this->totalRecords = (int) $totalRecords;
     }
 
-    public function validate($redirect) {
+    public function validate(string $redirect) : void
+    {
         if ($this->currentPage < 1 || $this->currentPage > $this->totalPages()) {
             header("Location: {$redirect}?page=1");
             return;
         }
     }
 
-    public function offset() {
+    public function offset() : int
+    {
         return $this->recordsPerPage * ($this->currentPage - 1);
     }
 
-    public function totalPages() {
+    public function totalPages() : float
+    {
         return ceil($this->totalRecords / $this->recordsPerPage);
     }
 
-    public function previousPage() {
+    public function previousPage() : bool
+    {
         $previous = $this->currentPage - 1;
         return ($previous > 0) ? $previous : false;
     }
-    public function nextPage() {
+    public function nextPage() : bool | int
+    {
         $next = $this->currentPage + 1;
         return ($next <= $this->totalPages()) ? $next : false;
         
     }
 
-    public function previousLink() {
+    public function previousLink() : string
+    {
         $html = '';
         if ($this->previousPage()) {
             $html = "<a class='pager__link' href='?page={$this->previousPage()}'>&laquo; Anterior</a>";
@@ -49,7 +55,8 @@ class Pager {
         return $html;
     }
 
-    public function nextLink() {
+    public function nextLink() : string
+    {
         if ($this->nextPage()) {
             $html = "<a class='pager__link' href='?page={$this->nextPage()}'> Siguiente &raquo; </a>";
         }
@@ -57,7 +64,8 @@ class Pager {
         return $html;
     }
 
-    public function numberedPager() {
+    public function numberedPager() : string
+    {
         $html = '';
         for ($i = 1; $i <= $this->totalPages(); $i++) {
             if ($i === $this->currentPage) {
@@ -70,7 +78,8 @@ class Pager {
         return $html;
     }
 
-    public function pager() {
+    public function pager() : string
+    {
         $html = '';
         if($this->totalRecords > $this->recordsPerPage) {
             $html = "<div class='pager'>";
