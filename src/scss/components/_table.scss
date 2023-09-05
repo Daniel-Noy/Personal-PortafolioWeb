@@ -1,0 +1,53 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.table {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    border-radius: .5rem;
+    overflow-y: auto;
+    transition: background-color 180ms;
+
+    &:nth-child(even) {
+        background-color: v.$clr-primary-600;
+        &:hover {
+            background-color: v.$clr-primary-500;
+        }
+    }
+    &:nth-child(odd) {
+        &:hover {
+            background-color: v.$clr-primary-600;
+        }
+    }
+
+    &__head,
+    &__body,
+    &__row {
+        display: grid;
+        grid-column: span 4;
+        grid-template-columns: subgrid;
+    }
+
+    &__head {
+        background-color: v.$clr-primary-600;
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+        padding: v.$spacing-50;
+        border-inline: 1px solid v.$clr-primary-500;
+    }
+
+
+    &__description p{
+        @include m.text-clamp(3);
+
+    }
+
+    &__image {
+        max-width: 250px;
+        min-width: 150px;
+    }
+
+}

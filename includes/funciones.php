@@ -18,15 +18,9 @@ function currentPage(string $path) : bool {
 }
 
 //? Auth
-function isAuth(bool $isAdmin = false) : void {
-    if ($isAdmin) {
-        if (!isAdmin()) {
-            header('Location: /auth/login');
-            return;
-        }
-    }
-    if (!isUser()) {
-        header('Location: /auth/login');
+function isAuth() : void {
+    if (!isAdmin()) {
+        header('Location: /login');
         return;
     }
 }

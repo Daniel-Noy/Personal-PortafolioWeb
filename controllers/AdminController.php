@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Controllers;
 
@@ -24,8 +25,7 @@ class AdminController {
                     $_SESSION['email'] = $user->email;
                     $_SESSION['isAdmin'] = $user->admin;
 
-                    // header('Location: /admin/dashboard');
-                    header('Location: /admin/projects/add');
+                    header('Location: /admin/dashboard');
                     return;
                 } else {
                     User::setAlert('error', 'Contraseña incorrecta');
@@ -41,8 +41,8 @@ class AdminController {
 
     public static function dashboard(Router $router)
     {
-        startSession();
-        // debugguing($_SESSION);
+        isAuth();
+
         $router->render('/admin/dashboard', [
             'title' => 'Dashboard'
         ]);

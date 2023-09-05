@@ -16,8 +16,8 @@ $router->get('/', [MainController::class, 'index']);
 
 //? Admin
 // $router->get('/admin/getpass', [AdminController::class, 'createPass']);
-$router->get('/admin', [AdminController::class, 'login']);
-$router->post('/admin', [AdminController::class, 'login']);
+$router->get('/login', [AdminController::class, 'login']);
+$router->post('/login', [AdminController::class, 'login']);
 
 $router->get('/admin/dashboard', [AdminController::class, 'dashboard']);
 
