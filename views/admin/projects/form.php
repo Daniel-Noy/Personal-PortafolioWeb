@@ -20,19 +20,17 @@
     name="image"
     >
 </div>
-<?php if (isset($speaker->currentImage)) { ?>
+<?php if (isset($project->image)) { ?>
     <p class="form__text">Imagen Actual:</p>
     <div class="form__image">
         <picture>
-            <source type="image/webp" srcset="<?php echo "{$_ENV['HOST']}/img/speakers/{$speaker->currentImage}.webp"; ?>">
-            <source type="image/png" srcset="<?php echo "{$_ENV['HOST']}/img/speakers/{$speaker->currentImage}.png"; ?>">
-            <img src="<?php echo "{$_ENV['HOST']}/img/speakers/{$speaker->currentImage}.png"; ?>" alt="Imagen Ponente">
+            <img src="<?php echo "{$_ENV['HOST']}/img/{$project->image}.webp"; ?>" alt="Imagen Ponente">
         </picture>
     </div>
 <?php } ?>
 
 <div class="form__field">
-    <label for="description" class="form__label">Descripcion</label>
+    <label for="description" class="form__label">Descripción</label>
     <textarea
     name="description"
     id="description"

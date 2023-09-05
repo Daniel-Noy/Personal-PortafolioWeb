@@ -44,6 +44,10 @@
         }
     }
 
+    &__image {
+        margin-bottom: v.$spacing-50;
+    }
+
     &__input,
     &__textarea {
         padding: 1rem;

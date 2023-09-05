@@ -1,4 +1,4 @@
-<h2 class="dashboard__heading"><?php echo $titulo ?></h2>
+<h2 class="dashboard__heading"><?php echo $title ?></h2>
 
 <div class="dashboard__button-container">
     <a class="dashboard__button || button button__secondary" href="/admin/projects/add">
@@ -26,6 +26,7 @@
                     <div class="table__col table__image"><img src="<?php echo "/img/{$project->image}.webp"; ?>" alt="Imagen proyecto"></div>
                 </a>
         <?php }} ?>
+        <?php echo $pager ?>
         </div>
     </div>
 </div>

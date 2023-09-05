@@ -1,31 +1,41 @@
 <?php
 declare(strict_types=1);
 
-function debugguing($var) : string {
+function debugguing(mixed $var) : string
+{
     echo '<pre>';
     var_dump($var);
     echo '</pre>';
     exit;
 }
 
-function s($html) : string {
+function s($html) : string
+{
     $s = htmlspecialchars($html);
     return $s;
 }
 
-function currentPage(string $path) : bool {
+function currentPage(string $path) : bool
+{
     return str_contains($_SERVER['PATH_INFO'] ?? '/', $path);
 }
 
-//? Auth
-function isAuth() : void {
+function deleteImage(string $name, string $ext = '.webp') : bool {
+    $imagesDir = '../public/img/';
+    return unlink($imagesDir.$name.$ext);
+}
+
+//? Auth -----------
+function isAuth() : void
+{
     if (!isAdmin()) {
         header('Location: /login');
         return;
     }
 }
 
-function isUser() : bool {
+function isUser() : bool
+{
     if (!isset($_SESSION)) {
         session_start();
     }
@@ -33,7 +43,8 @@ function isUser() : bool {
     return isset($_SESSION['name']);
 }
 
-function isAdmin() : bool {
+function isAdmin() : bool
+{
     if (!isset($_SESSION)) {
         session_start();
     }
