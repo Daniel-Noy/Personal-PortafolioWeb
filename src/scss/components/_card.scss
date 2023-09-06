@@ -35,11 +35,10 @@
 
     &__description {
         @include m.flex($gap: 1rem, $jc: flex-start, $centered: false);
-        @include m.text-clamp(2);
-
-        i {
-            font-size: 4rem;
-        }
+        @include m.text-clamp(3);
+    }
+    &__icon {
+        font-size: v.$fs-900;
     }
 
     &__links {

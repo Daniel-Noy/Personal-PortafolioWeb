@@ -11,41 +11,6 @@
 .container-sm {
     @include m.container-sm;
 }
-
-@each $name, $size in v.$spacing {
-    .mg-#{$name} {
-        margin: $size;
-    }
-    .mg-#{$name}-bt {
-        margin-bottom: $size;
-    }
-    .mg-#{$name}-tp {
-        margin-top: $size;
-    }
-    .mg-#{$name}-inline {
-        margin-inline: $size;
-    }
-    .mg-#{$name}-block {
-        margin-block: $size;
-    }
-    
-    .pd-#{$name} {
-        padding: $size;
-    }
-    .pd-#{$name}-bt {
-        padding-bottom: $size;
-    }
-    .pd-#{$name}-tp {
-        padding-top: $size;
-    }
-    .pd-#{$name}-inline {
-        padding-inline: $size;
-    }
-    .pd-#{$name}-block {
-        padding-block: $size;
-    }
-}
-
 //? ---- Text ----
 .accent-text {
     background-color: v.$clr-secondary-500;

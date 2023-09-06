@@ -28,19 +28,19 @@ $clr-primary-500: #23263a;
 $clr-primary-600: #201E33;
 $clr-primary-700: #1F1A2C;
 $clr-primary-700-tr: #1F1A2CB4;
-$clr-primary-800:   #1D1525;
-$clr-primary-900: #1A111E;
+// $clr-primary-800: #1D1525; //Not using
+// $clr-primary-900: #1A111E;
 
 $clr-primary-gradient-100: linear-gradient(180deg, rgba(31,26,44,1) 0%, rgba(31,26,44,1) 44%, rgba(32,30,51,0.9191877434567577) 100%);
 
 $clr-secondary-500: #1884dd;
 $clr-secondary-600: #1350CA;
-$clr-secondary-700: #0E23B6;
-$clr-secondary-800: #170AA2;
+// $clr-secondary-700: #0E23B6; //Not using
+// $clr-secondary-800: #170AA2;
 
-$clr-gray-500: #464D5A; 
-$clr-gray-400: #69737A; 
-$clr-gray-300: #8C9799; 
+// $clr-gray-500: #464D5A;  //Not using
+// $clr-gray-400: #69737A; 
+// $clr-gray-300: #8C9799; 
 $clr-gray-200: #AFB9B9; 
 $clr-gray-100: #D3D8D7;
 $clr-white: #fff;
@@ -53,18 +53,11 @@ $clr-shadow-200: 5px 5px 7px 1px #1f1a2cdc;
 $clr-shadow-250: 15px 20px 12px 1px #1f1a2cdc;
 
 //? ---- Spacing ----
-$spacing: (
-50: 2rem,
-100: 4rem,
-200: 8rem,
-300: 12rem,
-400: 16rem
-);
-$spacing-50: map-get($map: $spacing, $key: 50);
-$spacing-100: map-get($map: $spacing, $key: 100);
-$spacing-200: map-get($map: $spacing, $key: 200);
-$spacing-300: map-get($map: $spacing, $key: 300);
-$spacing-400: map-get($map: $spacing, $key: 400);
+$spacing-50: 2rem;
+$spacing-100: 4rem;
+$spacing-200: 8rem;
+$spacing-300: 12rem;
+$spacing-400: 16rem;
 
 
 //? ---- Media Queries ----
