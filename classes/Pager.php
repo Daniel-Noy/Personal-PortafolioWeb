@@ -17,7 +17,7 @@ class Pager {
 
     public function validate(string $redirect) : void
     {
-        if ($this->currentPage < 1 || $this->currentPage > $this->totalPages()) {
+        if ($this->currentPage < 1 || $this->currentPage > $this->totalPages() && $this->totalRecords !== 0) {
             header("Location: {$redirect}?page=1");
             return;
         }

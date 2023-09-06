@@ -222,7 +222,7 @@ class ActiveRecord {
 
     // Regresa solo los registros necesarios para la paginacion
     public static function paginar($perPage, $offset) {
-        $query = "SELECT * FROM " . static::$table . " ORDER BY id DESC LIMIT {$perPage} OFFSET {$offset}";
+        $query = "SELECT * FROM " . static::$table . " ORDER BY id ASC LIMIT {$perPage} OFFSET {$offset}";
         $res = self:: querySQL($query);
         return $res;
     }

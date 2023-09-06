@@ -6,19 +6,20 @@
     grid-template-columns: auto auto 1fr auto;
     border-radius: .5rem;
     overflow-y: auto;
-    transition: background-color 180ms;
+    transition: background-color 250ms;
 
-    &:nth-child(even) {
+    &__row:nth-child(even) {
         background-color: v.$clr-primary-600;
-        &:hover {
-            background-color: v.$clr-primary-500;
-        }
+        // &:hover {
+        //     background-color: v.$clr-primary-700;
+        // }
     }
-    &:nth-child(odd) {
-        &:hover {
-            background-color: v.$clr-primary-600;
-        }
-    }
+    // &__row:nth-child(odd) {
+    //     background-color: v.$clr-primary-700;
+    //     // &:hover {
+    //     //     background-color: v.$clr-primary-600;
+    //     // }
+    // }
 
     &__head,
     &__body,

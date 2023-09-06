@@ -20,7 +20,7 @@
     name="image"
     >
 </div>
-<?php if (isset($project->image)) { ?>
+<?php if (!empty($project->image)) { ?>
     <p class="form__text">Imagen Actual:</p>
     <div class="form__image">
         <picture>
@@ -35,7 +35,7 @@
     name="description"
     id="description"
     class="form__textarea"
-    rows="10"
+    rows="4"
     ><?php echo $project->description ?? ''; ?></textarea>
 </div>
 <div class="form__field">

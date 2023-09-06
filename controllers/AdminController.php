@@ -39,6 +39,13 @@ class AdminController {
         ]);
     }
 
+    public static function logout() {
+        isAuth();
+        $_SESSION = [];
+        header('Location: /');
+        return;
+    }
+
     public static function dashboard(Router $router)
     {
         isAuth();

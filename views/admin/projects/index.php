@@ -1,9 +1,9 @@
-<h2 class="dashboard__heading"><?php echo $title ?></h2>
+<h2 class="dashboard__title"><?php echo $title ?></h2>
 
-<div class="dashboard__button-container">
+<div class="dashboard__button-container container">
     <a class="dashboard__button || button button__secondary" href="/admin/projects/add">
         <i class='bx bx-folder-plus'></i>
-        Añadir Ponente
+        Añadir Proyecto
     </a>
 </div>
 
@@ -19,7 +19,7 @@
         <?php if ($projects) { 
             foreach ($projects as $project) { 
                 ?>
-                <a href="<?php echo "projects/edit?id={$project->id}";?>" class="table__row">
+                <a href="<?php echo "projects/edit?id={$project->id}";?>" class="table__row" title="Actualizar">
                     <div class="table__col table__id"><p><?php echo $project->id; ?></p></div>
                     <div class="table__col table__title"><p><?php echo $project->title; ?></p></div>
                     <div class="table__col table__description"><p><?php echo $project->description; ?></p></div>

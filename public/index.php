@@ -18,6 +18,7 @@ $router->get('/', [MainController::class, 'index']);
 // $router->get('/admin/getpass', [AdminController::class, 'createPass']);
 $router->get('/login', [AdminController::class, 'login']);
 $router->post('/login', [AdminController::class, 'login']);
+$router->get('/logout', [AdminController::class, 'logout']);
 
 $router->get('/admin/dashboard', [AdminController::class, 'dashboard']);
 
@@ -28,6 +29,6 @@ $router->post('/admin/projects/add', [ProjectController::class, 'addProject']);
 $router->get('/admin/projects/edit', [ProjectController::class, 'editProject']);
 $router->post('/admin/projects/edit', [ProjectController::class, 'editProject']);
 
-$router->get('/admin/projects/delete', [ProjectController::class, 'deleteProject']);
+$router->post('/admin/projects/delete', [ProjectController::class, 'deleteProject']);
 
 $router->checkRoutes();

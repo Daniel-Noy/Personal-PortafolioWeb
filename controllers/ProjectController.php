@@ -23,6 +23,7 @@ class ProjectController {
         $totalRecords = Project::total();
         $pager = new Pager($_GET['page'], $recordsPerPage, $totalRecords);
         $pager->validate('/admin/projects');
+        // debugguing($pager);
         
         $offset = $pager->offset();
         $projects = Project::paginar($recordsPerPage, $offset);
@@ -122,5 +123,26 @@ class ProjectController {
             'title' => 'Editar Proyecto',
             'project' => $project
         ]);
+    }
+
+    public static function deleteProject() {
+        $id = $_POST['id'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if (!$id) {
+            header('Location: /admin/projects');
+            return;
+        }
+
+        $project = Project::find($id);
+        if ($project) {
+            $res = $project->delete();
+            if ($res) {
+                deleteImage($project->image);
+                header('Location: /admin/projects');
+                return;
+            }
+        }
+
     }
 }
