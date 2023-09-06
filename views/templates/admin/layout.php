@@ -20,6 +20,5 @@
     </div>
 
     <script type="module" src="/build/js/app.js" defer></script>
-    <script src="https://kit.fontawesome.com/7242c0275d.js" crossorigin="anonymous"></script>
 </body>
 </html>

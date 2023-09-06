@@ -19,8 +19,9 @@
             <div class="main__container about-me">
                 <h2 class="main__title">Sobre Mi</h2>
                 <picture>
-                    <source srcset="https://picsum.photos/id/20/500/350">
-                    <img src="https://picsum.photos/id/20/500/350" alt="Mi imagen">
+                    <!-- <source srcset="https://picsum.photos/id/20/500/350"> -->
+                    <!-- <img src="https://picsum.photos/id/20/500/350" alt="Mi imagen"> -->
+                    <img class="about-me__image" src="/img/icons/icon.svg" alt="">
                 </picture>
                 <p class="about-me__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis impedit aliquam aperiam veniam vel optio culpa, quo, debitis dolorem repellat, est atque nihil numquam alias soluta! Odio laboriosam earum officiis!</p>
             </div>

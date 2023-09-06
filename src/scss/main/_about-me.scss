@@ -8,4 +8,8 @@
     @include m.tablet {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    &__image {
+        width: 400px;
+    }
 }

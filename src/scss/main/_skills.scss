@@ -28,7 +28,9 @@
     }
 
     &__image {
-        width: 60px;
+        width: 85px;
+        aspect-ratio: 3/2;
+        object-fit: contain;
     }
     &__name {
         margin: 0;
