@@ -13,7 +13,13 @@ body {
     font-family: v.$main-font;
     font-size: 1.6rem;
     color: v.$clr-texts;
+
     background-color: v.$clr-primary-500;
+    background-image: url("../../img/icons/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 a {
     color: v.$clr-links;

@@ -1,10 +1,9 @@
-<section class="main__section">
+<section class="main__section" id="projects">
     <div class="main__container projects">
         <h2 class="main__title">Mis proyectos</h2>
 
         <div class="projects__grid">
             <?php foreach ($projects as $project) { ?>
-            <?php for($i = 0; $i < 6; $i++) { ?>
                 <div class="card">
                     <figure>
                         <img src="<?php echo "/img/{$project->image}.webp"?>" alt="Imagen Proyecto" class="card__image">
@@ -18,7 +17,6 @@
                         </div>
                     </div>
                 </div>
-            <?php } ?>
             <?php } ?>
         </div>
     </div>

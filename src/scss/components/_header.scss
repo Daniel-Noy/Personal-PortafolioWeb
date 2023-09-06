@@ -3,7 +3,7 @@
 
 .header {
     color: v.$clr-white;
-    background-color: v.$clr-primary-700;
+    background: v.$clr-primary-gradient-100;
     
     &__grid {
         @include m.flex($centered: false);

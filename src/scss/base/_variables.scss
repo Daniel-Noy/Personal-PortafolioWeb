@@ -27,8 +27,11 @@ $fs-labels: $fs-500;
 $clr-primary-500: #23263a;
 $clr-primary-600: #201E33;
 $clr-primary-700: #1F1A2C;
-$clr-primary-800: #1D1525;
+$clr-primary-700-tr: #1F1A2CB4;
+$clr-primary-800:   #1D1525;
 $clr-primary-900: #1A111E;
+
+$clr-primary-gradient-100: linear-gradient(180deg, rgba(31,26,44,1) 0%, rgba(31,26,44,1) 44%, rgba(32,30,51,0.9191877434567577) 100%);
 
 $clr-secondary-500: #1884dd;
 $clr-secondary-600: #1350CA;

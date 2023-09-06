@@ -21,11 +21,26 @@
 
     &__container {
         @include m.flex;
+        padding: v.$spacing-50;
+        border-radius: 1rem;
+        transition: scale 150ms, background-color 250ms;
 
         i {
             font-size: 7rem;
         }
+
+        &:hover {
+            scale: 1.05;
+            background-color: v.$clr-primary-700-tr;
+        }
     }
+
+    &__skill {
+        transition: scale 50ms;
+        &:hover {
+            scale: 1.05;       
+    }
+}
 
     &__image {
         width: 85px;

@@ -10,8 +10,8 @@
             padding-block: v.$spacing-200;
         }
         
-        &:nth-child(even) {
-            background-color: v.$clr-primary-600;
+        &:nth-child(odd) {
+            background-color: v.$clr-primary-700-tr;
         }
     }
     &__container {

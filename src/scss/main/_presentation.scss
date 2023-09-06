@@ -6,7 +6,7 @@
     @include m.tablet {
         padding-inline: v.$spacing-200;
     }
-    background-color: v.$clr-primary-600;
+
     &__grid {
         @include m.grid(1, v.$spacing-50);
         @include m.container;

@@ -5,13 +5,15 @@
     border-radius: 1rem;
     background-color: v.$clr-primary-600;
     overflow: hidden;
-    box-shadow: v.$clr-shadow-200;
+    box-shadow: v.$clr-shadow-200;  
+    transition: all 600ms;
     &:not(.card--contact) {
         cursor: pointer;
     }
 
     @media (max-width: 350px) {
         max-width: 300px;
+        margin-left: .5rem;
     }
 
     &__image {
@@ -19,6 +21,8 @@
         height: 180px;
         object-fit: cover;
         object-position: center;
+        filter: brightness(70%);
+        transition: filter 150ms;
     }
 
     &__info {
@@ -67,11 +71,14 @@
         }
     }
 
-    transition: all 600ms;
     &:not(.card--contact):hover {
         transition: all 350ms;
         transform: translateY(-10px);
-        box-shadow: v.$clr-shadow-250;
+        // box-shadow: v.$clr-shadow-250;
+
+        #{$this}__image {
+            filter: brightness(100%);
+        }
     }
 
     &__modal {
@@ -89,6 +96,7 @@
             width: min(600px, 90%);
             
             &__image {
+                filter: brightness(100%);
                 @include m.tablet {
                     height: 260px;
                 }
@@ -98,6 +106,10 @@
             }
             &__links {
                 display: flex;
+            }
+
+            &:hover {
+                transform: none;
             }
             
         }
