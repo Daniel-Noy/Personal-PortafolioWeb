@@ -4,9 +4,9 @@
 .skills {
 
     &__categories {
-        @include m.grid(1, v.$spacing-100);
+        @include m.grid(1, v.$spacing-50);
         @include m.tablet {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
@@ -25,5 +25,14 @@
         i {
             font-size: 7rem;
         }
+    }
+
+    &__image {
+        width: 60px;
+    }
+    &__name {
+        margin: 0;
+        line-height: 1.4;
+        font-weight: v.$fw-light;
     }
 }
