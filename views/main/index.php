@@ -1,4 +1,4 @@
-<section class="presentation">
+<section class="presentation" id="presentation">
     <div class="presentation__grid">
         <div class="presentation__content">
             <h1 class="presentation__title">
@@ -8,7 +8,6 @@
         </div>
 
         <div class="presentation__image">
-            <!-- <img src="https://picsum.photos/id/5/400/300" alt=""> -->
             <img src="/img/avatar/Avatar.webp" alt="">
         </div>
     </div>
@@ -33,8 +32,7 @@
             <div class="main__container contact">
                 <h2 class="main__title">Contacto</h2>
 
-                <div class="contact__grid" id="contact">
-
+                <div class="contact__grid" id="contact-form">
                     <?php include_once __DIR__ . '/contact-cards.php'; ?>
                     <?php include_once __DIR__ . '/form.php'; ?>
                 </div>

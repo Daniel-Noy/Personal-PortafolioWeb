@@ -4,6 +4,8 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
 }
 *, *:before, *:after {
     box-sizing: inherit;
