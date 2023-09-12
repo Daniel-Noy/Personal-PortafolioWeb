@@ -1,4 +1,6 @@
-import { animateUpIn, animateUpOut, animateFadeIn, animateFadeOut } from "./animations.js";
+import Animate from "./animations.js";
+
+const animate = new Animate;
 
 export function expandCards() {
     const cardsContainer = document.querySelector('.projects__grid');
@@ -9,13 +11,13 @@ export function expandCards() {
     })
 }
 
-function expandCard({currentTarget, target}) {
+function expandCard({currentTarget}) {
     const previousModal = document.querySelector('.card__modal');
 
     if( previousModal ) {
         const previousCard = document.querySelector('.card--selected');
-        animateUpOut(previousCard, 450);
-        animateFadeOut(previousModal, 550);
+        animate.upOut(previousCard, 450)
+        animate.fadeOut(previousModal, 550);
     }
     else {
         const copyCard = currentTarget.cloneNode(true);
@@ -28,7 +30,7 @@ function expandCard({currentTarget, target}) {
         modal.appendChild(copyCard);
         document.body.appendChild(modal);
 
-        animateFadeIn(modal, 500);
-        animateUpIn(copyCard, 500);
+        animate.fadeIn(modal, 500);
+        animate.upIn(copyCard, 500);
     }
 }
