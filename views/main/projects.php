@@ -10,7 +10,14 @@
                     </figure>
                     <div class="card__info">
                         <h4 class="card__title"><?php echo $project->title; ?></h4>
-                        <p class="card__description"><?php echo $project->description; ?></p>
+                        <div class="card__description">
+                            <?php
+                                $paragraphs = explode('.', $project->description);
+                                foreach($paragraphs as $paragraph) {
+                            ?>
+                                <p class="card__text"><?php echo $paragraph ?>.</p>
+                            <?php }?>
+                        </div>
                         <div class="card__links">
                         <a class="card__link || button button__primary" href="<?php echo $project->repo?>" target="_blank"><i class='bx bxl-github || card__link-icon' ></i> Ver código</a>
                             <a class="card__link || button button__primary" href="<?php echo $project->page?>" target="_blank"><i class='bx bx-link-external || card__link-icon' > </i>Ver proyecto</a>

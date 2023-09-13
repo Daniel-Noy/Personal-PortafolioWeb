@@ -1,7 +1,8 @@
-vendor/
 node_modules/
-**/*.map
-**/*.css
-**/*.sql
+vendor/
 public/img/
+
+.env
+**/*.map
+**/*.sql
 /**/*.pdf
