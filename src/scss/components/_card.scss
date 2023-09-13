@@ -34,8 +34,11 @@
     }
 
     &__description {
-        @include m.flex($gap: 1rem, $jc: flex-start, $centered: false);
+        @include m.flex($gap: 0rem, $jc: flex-start, $centered: false);
         @include m.text-clamp(3);
+    }
+    &__text {
+        margin-block: .8rem;
     }
     &__icon {
         font-size: v.$fs-900;
@@ -67,6 +70,7 @@
         }
         #{$this}__description {
             display: flex;
+            gap: 1rem;
         }
     }
 
@@ -92,7 +96,7 @@
         transition: background-color 300ms;
 
         #{$this} {
-            width: min(600px, 90%);
+            width: min(700px, 90%);
             
             &__image {
                 filter: brightness(100%);
