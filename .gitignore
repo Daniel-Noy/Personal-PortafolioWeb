@@ -4,3 +4,4 @@ node_modules/
 **/*.css
 **/*.sql
 public/img/
+/**/*.pdf

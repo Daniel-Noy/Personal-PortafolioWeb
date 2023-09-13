@@ -23,7 +23,7 @@
                     <div class="table__col table__id"><p><?php echo $project->id; ?></p></div>
                     <div class="table__col table__title"><p><?php echo $project->title; ?></p></div>
                     <div class="table__col table__description"><p><?php echo $project->description; ?></p></div>
-                    <div class="table__col table__image"><img src="<?php echo "/img/{$project->image}.webp"; ?>" alt="Imagen proyecto"></div>
+                    <div class="table__col table__image"><img src="<?php echo "/img/projects/{$project->image}.webp"; ?>" alt="Imagen proyecto"></div>
                 </a>
         <?php }} ?>
         <?php echo $pager ?>

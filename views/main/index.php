@@ -4,7 +4,7 @@
             <h1 class="presentation__title">
                 Hola, soy <span class="text__gradient">Daniel</span> y soy <span class="text__gradient">Desarrollador Web</span>
             </h1>
-            <p class="presentation__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, nobis nostrum. Accusantium dolor officiis expedita iure atque harum tempore ratione.</p>
+            <p class="presentation__text">Bienvenido a mi portafolio, aquí podras encontrar algunos de mis primeros proyectos en este genial y emocionante mundo web.</p>
         </div>
 
         <div class="presentation__image">
@@ -21,7 +21,10 @@
                 <picture>
                     <img class="about-me__image" src="/img/icons/icon.svg" alt="">
                 </picture>
-                <p class="about-me__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis impedit aliquam aperiam veniam vel optio culpa, quo, debitis dolorem repellat, est atque nihil numquam alias soluta! Odio laboriosam earum officiis!</p>
+                <div class="about-me__content">
+                    <p class="about-me__text">Soy una persona curiosa, responsable, en constante aprendizaje, buscando conocer nuevos entornos y personas, ayudando a cumplir las metas que se asignen con los conocimientos que he adquirido.</p>
+                    <a href="/files/CV-DanielNoyola.pdf" target="_blank" class="button button__secondary">Ver curriculum</a>
+                </div>
             </div>
         </section>
 

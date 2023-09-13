@@ -6,7 +6,7 @@
             <?php foreach ($projects as $project) { ?>
                 <div class="card">
                     <figure>
-                        <img src="<?php echo "/img/{$project->image}.webp"?>" alt="Imagen Proyecto" class="card__image">
+                        <img src="<?php echo "/img/projects/{$project->image}.webp"?>" alt="Imagen Proyecto" class="card__image">
                     </figure>
                     <div class="card__info">
                         <h4 class="card__title"><?php echo $project->title; ?></h4>

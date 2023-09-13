@@ -45,10 +45,6 @@ class ProjectController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (!empty($_FILES['image']['tmp_name'])) {
-                $imagesDir = '../public/img/';
-
-                if(!is_dir($imagesDir)) mkdir($imagesDir, 0777, true);
-
                 $imageWebp = Image::make($_FILES['image']['tmp_name'])->resize(900, 500);
                 $imageName = md5( uniqid( strval(rand()), true ) );
                 $_POST['image'] = $imageName;
@@ -58,6 +54,8 @@ class ProjectController {
             $alerts = $project->validate();
 
             if(empty($alerts)) {
+                $imagesDir = '../public/img/projects';
+                if(!is_dir($imagesDir)) mkdir($imagesDir, 0777, true);
                 $imageWebp->save("{$imagesDir}/{$imageName}.webp");
 
                 $res = $project->save();
