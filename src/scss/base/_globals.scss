@@ -27,6 +27,10 @@ a {
     color: v.$clr-links;
     text-decoration: none;
     font-size: v.$fs-links;
+
+    &:hover {
+        color: v.$clr-white;
+    }
 }
 img {
     max-width: 100%;

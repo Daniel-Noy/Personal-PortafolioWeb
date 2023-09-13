@@ -21,10 +21,10 @@
     >
 </div>
 <?php if (!empty($project->image)) { ?>
-    <p class="form__text">Imagen Actual:</p>
     <div class="form__image">
+        <p class="form__text">Imagen Actual:</p>
         <picture>
-            <img src="<?php echo "{$_ENV['HOST']}/img/{$project->image}.webp"; ?>" alt="Imagen Ponente">
+            <img src="<?php echo "{$_ENV['HOST']}/img/projects/{$project->image}.webp"; ?>" alt="Imagen Ponente">
         </picture>
     </div>
 <?php } ?>

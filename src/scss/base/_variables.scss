@@ -40,13 +40,13 @@ $clr-secondary-600: #1350CA;
 
 // $clr-gray-500: #464D5A;  //Not using
 // $clr-gray-400: #69737A; 
-// $clr-gray-300: #8C9799; 
+$clr-gray-300: #8C9799; 
 $clr-gray-200: #AFB9B9; 
 $clr-gray-100: #D3D8D7;
 $clr-white: #fff;
 
 $clr-texts: $clr-gray-100;
-$clr-links: $clr-gray-100;
+$clr-links: $clr-gray-300;
 
 $clr-shadow-100: 3px 3px 7px 1px #464d5a2f;
 $clr-shadow-200: 5px 5px 7px 1px #1f1a2cdc;
