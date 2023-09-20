@@ -1,4 +1,5 @@
 <div class="form__container">
+    <p>(El envio del formulario tarda unos momentos)</p>
     <form class="form" action="https://formsubmit.co/danielnm1325@gmail.com" method="POST">
         <div class="form__field">
             <label for="name" class="form__label">Nombre</label>
@@ -40,7 +41,10 @@
             ></textarea>
         </div>
 
+<<<<<<< HEAD
         <!-- <input type="hidden" name="_captcha" value="false"> -->
+=======
+>>>>>>> dev
         <input type="hidden" name="_template" value="table">
 
         <button type="submit" class="form__submit || button button__secondary"><i class='bx bxs-send'></i> Enviar Correo</button>
