@@ -41,10 +41,6 @@
             ></textarea>
         </div>
 
-<<<<<<< HEAD
-        <!-- <input type="hidden" name="_captcha" value="false"> -->
-=======
->>>>>>> dev
         <input type="hidden" name="_template" value="table">
 
         <button type="submit" class="form__submit || button button__secondary"><i class='bx bxs-send'></i> Enviar Correo</button>
