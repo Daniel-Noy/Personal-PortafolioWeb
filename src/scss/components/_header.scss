@@ -7,7 +7,11 @@
     background: v.$clr-primary-gradient-100;
     
     &__grid {
-        @include m.flex($centered: false);
+        @include m.flex($centered: false, $jc: center);
+        @include m.phone {
+            justify-content: space-between;
+        }
+
     }
 
     &__logo {
