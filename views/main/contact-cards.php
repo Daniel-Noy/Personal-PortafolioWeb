@@ -17,4 +17,5 @@
             <div class="card__description"><i class='bx bxs-map  || card__icon'></i> Estado de México, México</div>
         </div>
     </div>
+<p>(El envio del formulario tarda unos momentos)</p>
 </div>
