@@ -8,7 +8,7 @@
         </div>
 
         <div class="presentation__image">
-            <img src="/img/avatar/Avatar.webp" alt="">
+            <img src="/img/avatar/Avatar.png" alt="">
         </div>
     </div>
 </section>

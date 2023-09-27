@@ -27,4 +27,8 @@
             grid-row: unset;
         }
     }
+
+    &__image {
+        max-width: 35rem;
+    }
 }
