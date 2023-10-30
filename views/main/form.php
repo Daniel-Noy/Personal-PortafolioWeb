@@ -1,5 +1,5 @@
 <div class="form__container">
-    <form class="form" action="https://formsubmit.co/danielnm1325@gmail.com" method="POST">
+    <form class="form" action="https://getform.io/f/7729db9a-861b-4617-a114-a71e63cbc654" method="POST">
         <div class="form__field">
             <label for="name" class="form__label">Nombre</label>
             <input 
@@ -26,7 +26,7 @@
             <label for="subject" class="form__label">Asunto</label>
             <input 
             type="text"
-            name="_subject"
+            name="subject"
             id="subject"
             class="form__input"
             placeholder="Tu Nombre"
@@ -43,8 +43,6 @@
             required
             ></textarea>
         </div>
-
-        <input type="hidden" name="_template" value="table">
 
         <button type="submit" class="form__submit || button button__secondary"><i class='bx bxs-send'></i> Enviar Correo</button>
     </form>
