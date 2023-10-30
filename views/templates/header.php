@@ -4,7 +4,6 @@
 
     <nav class="header__nav">
         <ul class="header__links">
-            <li><a href="#presentation" class="header__link">Inicio</a></li>
             <li><a href="#projects" class="header__link">Proyectos</a></li>
             <li><a href="#contact-form" class="header__link">Contacto</a></li>
             <?php if(isAdmin()) { ?>

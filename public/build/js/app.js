@@ -8,8 +8,16 @@ document.addEventListener('DOMContentLoaded', ()=> {
     if(cards) {
         expandCards();
     }
+
+    form.addEventListener('submit', enviarCorreo)
 })
 
+function enviarCorreo(e) {
+    const submitBtn = document.querySelector('.form__submit');
+    submitBtn.disabled = true
+    submitBtn.textContent = 'Enviando Correo'
 
-
-
+    const loader = document.createElement('span');
+    loader.className = 'loader';
+    submitBtn.appendChild(loader)
+}

@@ -8,6 +8,7 @@
             id="name"
             class="form__input"
             placeholder="Tu Nombre"
+            required
             >
         </div>
         <div class="form__field">
@@ -18,6 +19,7 @@
             id="email"
             class="form__input"
             placeholder="Tu Email"
+            required
             >
         </div>
         <div class="form__field">
@@ -28,6 +30,7 @@
             id="subject"
             class="form__input"
             placeholder="Tu Nombre"
+            required
             >
         </div>
         <div class="form__field">
@@ -36,7 +39,8 @@
             name="message"
             id="message"
             class="form__textarea"
-            rows="10"
+            rows="8"
+            required
             ></textarea>
         </div>
 

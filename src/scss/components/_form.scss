@@ -67,6 +67,10 @@
     }
 
     &__submit {
+        &:disabled {
+            background-color: v.$clr-secondary-500;
+            opacity: .6;
+        }
         @include m.tablet {
             width: max-content;
             padding-block: 1.5rem;

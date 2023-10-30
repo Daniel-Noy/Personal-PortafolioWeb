@@ -5,7 +5,7 @@
     <nav class="header__nav">
         <ul class="header__links">
             <li><a href="/" class="header__link">Inicio</a></li>
-            <li><a href="/logout" class="header__link">Cerrar Session</a></li>
+            <li><a href="/logout" class="header__link">Cerrar Sesion</a></li>
         </ul>
     </nav>
     </div>

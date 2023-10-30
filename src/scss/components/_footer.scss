@@ -2,6 +2,7 @@
 
 .footer {
     display: flex;
+    align-self: end;
     flex-wrap: wrap;
     gap: v.$spacing-50;
     align-items: center;
