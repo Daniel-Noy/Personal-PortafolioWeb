@@ -33,7 +33,7 @@ class Pager {
         return ceil($this->totalRecords / $this->recordsPerPage);
     }
 
-    public function previousPage() : bool
+    public function previousPage() : bool | int
     {
         $previous = $this->currentPage - 1;
         return ($previous > 0) ? $previous : false;
@@ -57,6 +57,7 @@ class Pager {
 
     public function nextLink() : string
     {
+        $html = '';
         if ($this->nextPage()) {
             $html = "<a class='pager__link' href='?page={$this->nextPage()}'> Siguiente &raquo; </a>";
         }

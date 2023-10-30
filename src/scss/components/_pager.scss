@@ -1,0 +1,7 @@
+@use '../base/variables' as v;
+
+.pager {
+    display: flex;
+    gap: 1rem;
+    margin-top: v.$spacing-100;
+}

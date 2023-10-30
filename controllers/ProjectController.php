@@ -19,11 +19,10 @@ class ProjectController {
             return;
         }
         
-        $recordsPerPage = 5;
+        $recordsPerPage = 3;
         $totalRecords = Project::total();
         $pager = new Pager($_GET['page'], $recordsPerPage, $totalRecords);
         $pager->validate('/admin/projects');
-        // debugguing($pager);
         
         $offset = $pager->offset();
         $projects = Project::paginar($recordsPerPage, $offset);
@@ -43,6 +42,8 @@ class ProjectController {
         $project = new Project();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $imageWebp = '';
+            $imageName = '';
 
             if (!empty($_FILES['image']['tmp_name'])) {
                 $imageWebp = Image::make($_FILES['image']['tmp_name'])->resize(900, 500);
