@@ -1,4 +1,3 @@
-import { formImage } from "./modules/formImage.js";
 import { expandCards } from "./modules/expandCards.js";
 
 const cards = document.querySelector('.projects__grid');
@@ -9,7 +8,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
         expandCards();
     }
 
-    form.addEventListener('submit', enviarCorreo)
+    if(form){
+        form.addEventListener('submit', enviarCorreo)
+    }
 })
 
 function enviarCorreo(e) {

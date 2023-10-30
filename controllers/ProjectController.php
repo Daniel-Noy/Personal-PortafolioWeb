@@ -19,7 +19,7 @@ class ProjectController {
             return;
         }
         
-        $recordsPerPage = 3;
+        $recordsPerPage = 5;
         $totalRecords = Project::total();
         $pager = new Pager($_GET['page'], $recordsPerPage, $totalRecords);
         $pager->validate('/admin/projects');
