@@ -103,12 +103,13 @@ class TechController {
             $alerts = $tool->validate();
 
             if(empty($alerts)) {
+                $res = $tool->save();
+                
                 if (!empty($tempIcon)) {
+                    debugguing($tempIcon, static::$iconsDir."/{$iconName}.svg");
                     move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
                     deleteImage("icons/{$previousIcon}", '.svg');
                 }
-
-                $res = $tool->save();
                 if ($res) {
                     header('Location: /admin/technologies');
                 }

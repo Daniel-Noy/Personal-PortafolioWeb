@@ -24,7 +24,7 @@
     <div class="form__image">
         <p class="form__text">Icono Actual:</p>
         <picture>
-            <img src="<?php echo "{$_ENV['HOST']}/img/projects/{$tool->icon}.svg"; ?>" alt="Imagen Proyecto">
+            <img src="<?php echo "{$_ENV['HOST']}img/icons/{$tool->icon}.svg"; ?>" alt="Icono Actual">
         </picture>
     </div>
 <?php } ?>
