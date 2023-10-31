@@ -21,4 +21,17 @@ class Tool extends ActiveRecord {
         $this->category_id = $args['category_id'] ?? 0;
         $this->icon = $args['icon'] ?? '';
     }
+
+    public function validate()
+    {
+        $properties = get_object_vars($this);
+        foreach ($properties as $key => $value) {
+            if ($key === 'id') continue;
+            if ($value === ''){
+                self::$alerts['error'][] = "{$key} Debe tener un valor";
+        }
+        }
+
+        return self::$alerts;
+    }
 }

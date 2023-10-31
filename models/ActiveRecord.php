@@ -112,9 +112,9 @@ class ActiveRecord {
         // Insertar en la base de datos
         $query = " INSERT INTO " . static::$table . " ( ";
         $query .= join(', ', array_keys($atributos));
-        $query .= " ) VALUES (' "; 
+        $query .= " ) VALUES ('"; 
         $query .= join("', '", array_values($atributos));
-        $query .= " ') ";
+        $query .= "') ";
 
         // return ['query'=>$query]; // Descomentar si no te funciona la peticion a la base de datos
         // Resultado de la consulta

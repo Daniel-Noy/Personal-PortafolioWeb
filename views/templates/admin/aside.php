@@ -14,7 +14,7 @@
             </span>
         </a>
 
-        <a href="/admin/techs" class="dashboard__link <?php echo currentPage('/techs') ? 'dashboard__link--active': ''; ?>">
+        <a href="/admin/technologies" class="dashboard__link <?php echo currentPage('/techs') ? 'dashboard__link--active': ''; ?>">
             <i class="bx bxl-javascript || dashboard__icon"></i>
             <span class="dashboard__link-text">
                 Tecnologias

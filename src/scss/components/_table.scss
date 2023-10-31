@@ -7,6 +7,12 @@
     border-radius: .5rem;
     overflow-y: auto;
     transition: background-color 250ms;
+    
+    &.table__tech {
+        grid-template-columns: repeat(3, auto) max-content;
+        margin: 0 auto;
+        max-width: 720px;
+    }
 
     &__row:nth-child(even) {
         background-color: v.$clr-primary-600;
@@ -40,6 +46,13 @@
     &__image {
         max-width: 250px;
         min-width: 150px;
+    }
+
+    &__icon {
+        img {
+            max-width: 100px;
+            min-width: 80px;
+        }
     }
 
 }

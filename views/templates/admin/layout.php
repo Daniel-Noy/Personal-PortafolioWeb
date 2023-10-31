@@ -19,6 +19,6 @@
         </main>
     </div>
 
-    <script type="module" src="/build/js/app.js" defer></script>
+    <!-- <script type="module" src="/build/js/app.js" defer></script> -->
 </body>
 </html>
