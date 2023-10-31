@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Controllers;
 
+use Error;
+use Exception;
 use Models\Category;
 use Models\Tool;
 use MVC\Router;
@@ -105,14 +107,20 @@ class TechController {
             if(empty($alerts)) {
                 $res = $tool->save();
                 
-                if (!empty($tempIcon)) {
-                    debugguing($tempIcon, static::$iconsDir."/{$iconName}.svg");
-                    move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
-                    deleteImage("icons/{$previousIcon}", '.svg');
+                try {
+
+                    if (!empty($tempIcon)) {
+                        debugguing($tempIcon, static::$iconsDir."/{$iconName}.svg");
+                        move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
+                        deleteImage("icons/{$previousIcon}", '.svg');
+                    }
+                    if ($res) {
+                        header('Location: /admin/technologies');
+                    }
+                }catch (\Throwable $th) {
+                    throw new Exception('Error al guardar la imagen', 0, $th);
                 }
-                if ($res) {
-                    header('Location: /admin/technologies');
-                }
+                
             }
         }
 
