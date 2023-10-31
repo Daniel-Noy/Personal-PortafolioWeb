@@ -50,6 +50,7 @@ class TechController {
             ]);
             $errors = $tool->validate();
             if (empty($errors)){
+                if(!is_dir(static::$iconsDir)) mkdir(static::$iconsDir, 0777, true);
                 if(!move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg")){
                     debugguing('Error al cargar la imagen');
                 }
@@ -105,20 +106,16 @@ class TechController {
             $alerts = $tool->validate();
 
             if(empty($alerts)) {
-                $res = $tool->save();
-                
-                try {
+                if (!empty($tempIcon)) 
+                {
+                    if(!is_dir(static::$iconsDir)) mkdir(static::$iconsDir, 0777, true);
 
-                    if (!empty($tempIcon)) {
-                        debugguing($tempIcon, static::$iconsDir."/{$iconName}.svg");
-                        move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
-                        deleteImage("icons/{$previousIcon}", '.svg');
-                    }
-                    if ($res) {
-                        header('Location: /admin/technologies');
-                    }
-                }catch (\Throwable $th) {
-                    throw new Exception('Error al guardar la imagen', 0, $th);
+                    move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
+                    deleteImage("icons/{$previousIcon}", '.svg');
+                }
+                $res = $tool->save();
+                if ($res) {
+                    header('Location: /admin/technologies');
                 }
                 
             }
