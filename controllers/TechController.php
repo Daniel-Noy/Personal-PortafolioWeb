@@ -48,7 +48,9 @@ class TechController {
             ]);
             $errors = $tool->validate();
             if (empty($errors)){
-                move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
+                if(!move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg")){
+                    debugguing('Error al cargar la imagen');
+                }
                 $res = $tool->save();
                 
                 if($res) {
