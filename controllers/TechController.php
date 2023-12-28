@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Controllers;
 
-use Error;
-use Exception;
 use Models\Category;
 use Models\Tool;
 use MVC\Router;

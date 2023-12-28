@@ -23,7 +23,7 @@
                 </picture>
                 <div class="about-me__content">
                     <p class="about-me__text">Soy una persona curiosa, responsable, en constante aprendizaje, buscando conocer nuevos entornos y personas, ayudando a cumplir las metas que se asignen con los conocimientos que he adquirido.</p>
-                    <a href="/files/CV-DanielNoyola.pdf" target="_blank" class="button button__secondary">Ver curriculum</a>
+                    <a href="/files/CV-DanielNoyola2.0.pdf" target="_blank" class="button button__secondary">Ver curriculum</a>
                 </div>
             </div>
         </section>
