@@ -48,10 +48,14 @@ class TechController {
             ]);
             $errors = $tool->validate();
             if (empty($errors)){
+<<<<<<< HEAD
                 if(!is_dir(static::$iconsDir)) mkdir(static::$iconsDir, 0777, true);
                 if(!move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg")){
                     debugguing('Error al cargar la imagen');
                 }
+=======
+                move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
+>>>>>>> dev
                 $res = $tool->save();
                 
                 if($res) {
@@ -104,6 +108,7 @@ class TechController {
             $alerts = $tool->validate();
 
             if(empty($alerts)) {
+<<<<<<< HEAD
                 if (!empty($tempIcon)) 
                 {
                     if(!is_dir(static::$iconsDir)) mkdir(static::$iconsDir, 0777, true);
@@ -111,11 +116,21 @@ class TechController {
                     move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
                     deleteImage("icons/{$previousIcon}", '.svg');
                 }
+=======
+                if (!empty($tempIcon)) {
+                    move_uploaded_file($tempIcon, static::$iconsDir."/{$iconName}.svg");
+                    deleteImage("icons/{$previousIcon}", '.svg');
+                }
+
+>>>>>>> dev
                 $res = $tool->save();
                 if ($res) {
                     header('Location: /admin/technologies');
                 }
+<<<<<<< HEAD
                 
+=======
+>>>>>>> dev
             }
         }
 
