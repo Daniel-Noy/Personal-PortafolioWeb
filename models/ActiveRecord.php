@@ -155,7 +155,9 @@ class ActiveRecord {
     }
 
     //? Obtener los datos de la base
-    // Obtener todos los Registros
+    /**
+     * Obtiene todos los registros del modelo
+     */
     public static function all($orden = 'DESC') {
         $query = "SELECT * FROM " . static::$table . " ORDER BY id {$orden}";
         $res = self::querySQL($query);
