@@ -22,7 +22,8 @@
                     <img class="about-me__image" src="/img/icons/icon.svg" alt="">
                 </picture>
                 <div class="about-me__content">
-                    <p class="about-me__text">Soy una persona curiosa, responsable, en constante aprendizaje, buscando conocer nuevos entornos y personas, ayudando a cumplir las metas que se asignen con los conocimientos que he adquirido.</p>
+                    <p class="about-me__text">Estudiante de Ingeniería en Sistemas Computacionales con enfoque en desarrollo web. A través de proyectos académicos y cursos externos he adquirido experiencia práctica en la construcción de aplicaciones y sitios web.</p>
+                    <p class="about-me__text">Me considero una persona curiosa, autodidacta y comprometida con el aprendizaje continuo, interesado en ampliar mis conocimientos en otros lenguajes como C# y otras tecnologías relacionadas con software y TI, para fortalecer mi perfil como desarrollador.</p>
                     <a href="/files/CV-DanielNoyola2.0.pdf" target="_blank" class="button button__secondary">Ver curriculum</a>
                 </div>
             </div>

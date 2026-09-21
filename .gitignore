@@ -5,4 +5,5 @@ public/img/
 .env
 **/*.map
 **/*.sql
+!database/init.sql
 /**/*.pdf

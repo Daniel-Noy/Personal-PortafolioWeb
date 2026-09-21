@@ -38,6 +38,7 @@
         @include m.text-clamp(3);
     }
     &__text {
+        white-space: pre-line;
         margin-block: .8rem;
     }
     &__icon {
