@@ -13,3 +13,8 @@ require 'database.php';
 
 // Conect to database
 ActiveRecord::setDB($db);
+
+// Iniciar sesión antes de enviar cualquier salida o encabezado
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}

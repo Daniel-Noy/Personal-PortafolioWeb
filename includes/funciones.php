@@ -36,7 +36,7 @@ function isAuth() : void
 
 function isUser() : bool
 {
-    if (!isset($_SESSION)) {
+    if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
 
@@ -45,7 +45,7 @@ function isUser() : bool
 
 function isAdmin() : bool
 {
-    if (!isset($_SESSION)) {
+    if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
 
@@ -54,8 +54,9 @@ function isAdmin() : bool
 
 function startSession() : void
 {
-    if (!isset($_SESSION)) {
+    if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
 }
+
 
